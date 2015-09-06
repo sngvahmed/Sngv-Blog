@@ -12,7 +12,7 @@ angular.module('SngvBlog', [
         controllerAs: 'MainCtrl'
       })
       .when('/about', {
-        templateUrl: 'views/about.html',
+        templateUrl: 'app/about/about.html',
         controllerAs: 'AboutCtrl'
       }).when('/login' , {
         templateUrl: 'app/login/login.html',
