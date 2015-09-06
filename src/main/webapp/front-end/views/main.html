@@ -1,0 +1,15 @@
+<div class="jumbotron" ng-controller="MainController as main">
+  <form ng-submit="main.onSubmit()" novalidate>
+    <input ng-model="main.user.name" type="text" name="name" placeholder="Name" class="form-control" required/><br/><br/>
+    <input ng-model="main.user.email"  type="email" name="email" placeholder="Email" class="form-control" required/><br/><br/>
+    <input ng-model="main.user.password" type="password" name="password" placeholder="Password" class="form-control" required/><br/><br/>
+    <input ng-model="main.user.repassword" type="password" name="repassword" placeholder="Re Password" class="form-control" required/><br/><br/>
+    <input ng-model="main.user.age"  type="text" name="age" placeholder="Age" class="form-control" required/><br/><br/>
+    <center>
+      <input type="submit" class="btn btn-default"/>
+    </center>
+  </form>
+  <center>
+    <button type="submit" class="btn btn-danger" ng-click="main.showUser()">List User</button>
+  </center>
+</div>
