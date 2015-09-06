@@ -13,11 +13,12 @@
 
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="org.authentication" />
+		<!-- package scan for component to autowire -->
+		<property name="packagesToScan" value="my.site.blog" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="generateDdl" value="true" />
-				<property name="showSql" value="true" />
+				<property name="showSql" value="false" />
 			</bean>
 		</property>
 		<property name="jpaProperties">
@@ -39,5 +40,6 @@
 	<!-- transactionManager component scan -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<jpa:repositories base-package="org.authentication" />
+	<!-- package scan for component to autowire -->
+	<jpa:repositories base-package="my.site.blog" />
 </beans>    
