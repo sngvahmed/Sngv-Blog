@@ -7,7 +7,7 @@ angular.module('SngvBlog', [
   ]).config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'app/home/home.html',
         controller: 'MainController',
         controllerAs: 'MainCtrl'
       })
