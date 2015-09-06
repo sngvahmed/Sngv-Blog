@@ -19,7 +19,11 @@ app.controller("LoginCtrl" , function ($http) {
 
     this.sendLoginRequest = function () {
 
-        var request = $http.post(this.user , 'http://localhost:8080/Blog/login');
+        var user = {
+            username : this.user.username,
+            password : this.user.password
+        };
+        var request = $http.post('http://localhost:8080/Blog/login' , user );
 
         request.success(function (data) {
             console.log(data);

@@ -9,5 +9,5 @@ import java.util.List;
 
 @Controller
 public interface UserCrud extends CrudRepository<User, String> {
-    public List<User> findByName(String name);
+    public List<User> findByUsername(String username);
 }

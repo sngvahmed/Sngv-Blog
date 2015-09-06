@@ -11,10 +11,10 @@ import java.io.Serializable;
 
 @Entity
 @Table(name="USER")
-public class User implements Serializable{
+public class User{
 
     @Id
-    String name;
+    String username;
 
     @Column(nullable = false)
     String password;
@@ -24,18 +24,18 @@ public class User implements Serializable{
     int age;
 
     public User(String name, String password, String email, int age) {
-        this.name = name;
+        this.username = name;
         this.password = password;
         this.email = email;
         this.age = age;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
