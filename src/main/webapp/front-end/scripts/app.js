@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('webappApp', [
+angular.module('SngvBlog', [
     'ngAnimate',  'ngAria', 'ngCookies', 'ngMessages', 'ngResource',
     'ngRoute', 'ngSanitize',
     'ngTouch'
@@ -9,13 +9,15 @@ angular.module('webappApp', [
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainController',
-        controllerAs: 'main'
+        controllerAs: 'MainCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controllerAs: 'about'
-      })
-      .otherwise({
+        controllerAs: 'AboutCtrl'
+      }).when('/login' , {
+        templateUrl: 'app/login/login.html',
+        controllerAs: 'LoginCtrl'
+      }).otherwise({
         redirectTo: '/'
       });
   });

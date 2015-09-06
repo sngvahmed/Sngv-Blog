@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('webappApp');
+var app = angular.module('SngvBlog');
 
 app.controller('MainController', ['$http' , function ($http) {
 

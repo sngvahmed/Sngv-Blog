@@ -1,4 +1,6 @@
 <div ng-controller="AboutCtrl as ctrl">
   users ::
-  <user-info></user-info>
+  <li ng-repeat="user in about.users">
+    {{user.name}} and age is {{user.age}}
+  </li>
 </div>
